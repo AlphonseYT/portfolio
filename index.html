@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Giri - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Light Theme */
+        .light-theme {
+            background: linear-gradient(145deg, #e4d9ff, #f3f0ff);
+            color: #333;
+        }
+
+        /* Dark Theme */
+        .dark-theme {
+            background: linear-gradient(145deg, #2f2f2f, #1a1a1a);
+            color: #ddd;
+            position: relative;
+        }
+
+        /* Snowfall animation */
+        .snowfall {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: url('https://cdn.pixabay.com/photo/2017/10/21/19/57/snow-2871162_960_720.png') repeat top center;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 100%;
+            }
+        }
+
+        /* Stars animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px) center center;
+            background-size: 10px 10px;
+            animation: starAnimation 1s infinite;
+        }
+
+        @keyframes starAnimation {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: #e4d9ff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 20px 20px 60px #b0a1c6, -20px -20px 60px #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 30px 30px 70px #a392be, -30px -30px 70px #ffffff;
+        }
+
+        /* Text shadow for light theme */
+        .light-theme .header h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text shadow for dark theme */
+        .dark-theme .header h1 {
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #5d3b99;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #6a5e8a;
+        }
+
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 20px #b0a1c6, -10px -10px 20px #ffffff;
+            border: 5px solid #5d3b99;
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .about-me, .skills, .achievements, .experience {
+            margin-top: 20px;
+        }
+
+        .about-me h2, .skills h2, .achievements h2, .experience h2 {
+            font-size: 1.8rem;
+            color: #5d3b99;
+            margin-bottom: 10px;
+        }
+
+        .about-me p, .achievements ul li, .experience ul li {
+            font-size: 1.1rem;
+            color: #6a5e8a;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .skills ul li {
+            font-size: 1.1rem;
+            color: #6a5e8a;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skills ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #5d3b99;
+        }
+
+        .achievements ul, .experience ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #fff;
+            background: #5d3b99;
+            box-shadow: 10px 10px 20px #b0a1c6, -10px -10px 20px #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .contact a:hover {
+            background: #43277b;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #6a5e8a;
+        }
+
+        /* Button to toggle between themes */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #5d3b99;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .theme-switcher:hover {
+            background: #43277b;
+        }
+    </style>
+</head>
+
+<body class="light-theme">
+    <button class="theme-switcher" onclick="toggleTheme()">Switch to Dark Mode</button>
+
+    <!-- Snowfall and Starry Background in Dark Mode -->
+    <div class="snowfall"></div>
+    <div class="stars"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Santosh Giri</h1>
+            <p>CSIT Student at Midwest University</p>
+        </div>
+
+        <div class="profile">
+            <img src="https://scontent.fbwa5-1.fna.fbcdn.net/v/t39.30808-6/313084274_849971689468301_4383103337237448761_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BK33N4Uzv3cQ7kNvgFaZ-7y&_nc_oc=AdgB37HVcHqyME4Pz0usj2JFQzJwwyBz8YElT-6SqnNsDBlSlLhkh-oKGA7EEbbZqo80ExhFds4PjLoPs4tDYRoN&_nc_zt=23&_nc_ht=scontent.fbwa5-1.fna&_nc_gid=A_R2FbSMR5Zh0stnB12nei4&oh=00_AYDG4B8Ph3SqsL1RECDqObath0aQ8rtu_hxzlt2UiAZFOw&oe=678AEC74" alt="Santosh Giri">
+        </div>
+
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>I am a passionate student pursuing CSIT at Midwest University. I have a strong interest in technology,
+               development, and exploring new innovations in the digital world. My goal is to contribute to impactful projects
+               and continuously grow as a developer.</p>
+        </div>
+
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Flutter Development</li>
+                <li>Networking</li>
+                <li>Hacking</li>
+                <li>Game Development</li>
+            </ul>
+        </div>
+
+        <div class="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Winner of National Coding Championship 2023</li>
+                <li>Published research paper on "AI in Game Development"</li>
+                <li>Developed a cross-platform app with 10k+ downloads</li>
+                <li>Certified Ethical Hacker (CEH)</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Developed a task management app for a local company to streamline their workflow.</li>
+                <li>Internship at XYZ Tech, focusing on mobile app development using Flutter.</li>
+                <li>Contributed to open-source projects on GitHub, enhancing community-driven apps.</li>
+                <li>Led a team of 4 in creating a game application for a university competition.</li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:santosh.giri@example.com">Email Me</a>
+            <a href="https://www.youtube.com/@alphonseyt9574" target="_blank">Youtube</a>
+            <a href="https://www.facebook.com/profile.php?id=100033664321562" target="_blank">Facebook</a>
+            <a href="/404.html" class="contact-btn">Contact Me</a>
+
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Santosh Giri. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-switcher');
+            const snowfall = document.querySelector('.snowfall');
+            const stars = document.querySelector('.stars');
+
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                button.textContent = 'Switch to Light Mode';
+                snowfall.style.display = 'block';
+                stars.style.display = 'block';
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                button.textContent = 'Switch to Dark Mode';
+                snowfall.style.display = 'none';
+                stars.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

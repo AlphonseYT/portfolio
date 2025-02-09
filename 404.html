@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 - Sleeping...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #2e3a59;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6347;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 5rem;
+            color: #808080; /* Grey color */
+            font-weight: bold;
+            text-align: center;
+            z-index: 1;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #4b6b7f;
+            margin-top: 20px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .moon {
+            font-size: 100px;
+            color: #ffe4b5;
+            margin-top: 40px;
+            z-index: 1;
+            animation: floatAnimation 3s ease-in-out infinite;
+            text-align: center;
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            color: #4b6b7f;
+            position: absolute;
+            bottom: 10px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        /* Background Animation */
+        @keyframes moveBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        /* Floating emoji animation */
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ffd700, #ff6347, #4b6b7f, #ff1493, #8a2be2);
+            background-size: 400% 400%;
+            animation: moveBackground 6s ease infinite; /* Faster wave animation */
+            z-index: 0;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div>
+        <h2>Error 404</h2> <!-- Error 404 text -->
+        <h1>Oops! The person you are trying to contact is currently sleeping...</h1>
+        <p>They'll be awake soon. Please try again later!</p>
+        <div class="moon">😴</div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Your Website. Sweet dreams!</p>
+    </div>
+
+</body>
+
+</html>
