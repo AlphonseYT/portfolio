@@ -233,6 +233,63 @@
         .theme-switcher:hover {
             background: #43277b;
         }
+
+        /* Adding gradient animations to the header */
+        .header h1 {
+            background: linear-gradient(90deg, #5d3b99, #8f66d4, #5d3b99);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 3s ease infinite;
+            background-size: 300% 300%;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Adding hover effect to the skills list */
+        .skills ul li {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skills ul li:hover {
+            color: #5d3b99;
+            transform: scale(1.05);
+        }
+
+        /* Adding a neon glow effect to the contact buttons */
+        .contact a {
+            box-shadow: 0 0 5px #5d3b99, 0 0 10px #5d3b99, 0 0 20px #5d3b99, 0 0 40px #5d3b99;
+        }
+
+        .contact a:hover {
+            box-shadow: 0 0 10px #43277b, 0 0 20px #43277b, 0 0 30px #43277b, 0 0 50px #43277b;
+        }
+
+        /* Adding a subtle animation to the profile image */
+        .profile img {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
 
@@ -292,10 +349,9 @@
 
         <div class="contact">
             <a href="mailto:santosh.giri@example.com">Email Me</a>
-            <a href="https://www.youtube.com/@alphonseyt9574" target="_blank">Youtube</a>
+            <a href="https://www.youtube.com/@alphonseyt9574" target="_blank">YouTube</a>
             <a href="https://www.facebook.com/profile.php?id=100033664321562" target="_blank">Facebook</a>
             <a href="/404.html" class="contact-btn">Contact Me</a>
-
         </div>
 
         <div class="footer">
