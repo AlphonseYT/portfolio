@@ -1,101 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santosh Giri - Portfolio</title>
+    <title>Santosh Giri - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<body class="light-theme">
-    <button class="theme-switcher" onclick="toggleTheme()">Switch to Dark Mode</button>
-
-    <!-- Snowfall and Starry Background in Dark Mode -->
-    <div class="snowfall"></div>
-    <div class="stars"></div>
-
-    <div class="container">
-        <div class="header">
-            <h1>Santosh Giri</h1>
-            <p>CSIT Student at Midwest University</p>
-        </div>
-
-        <div class="profile">
-            <img src="https://scontent.fpkr3-1.fna.fbcdn.net/v/t39.30808-1/241048762_935443207322745_2552202118654059713_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEys6A39iloWkCwh9noOjPJq-PH8W-HIEer48fxb4cgRwTcHDNg70wzSay8VreEk1-bMj1a-aCa8OPwG-ukVDC4&_nc_ohc=kAAMZJZxUCoQ7kNvgFjSVpp&_nc_oc=AdiT1PRK33Y24H84HEeQUL5EM1UQzeDk6EyGZoA-m2Z88BviMEubaFxc18EY38KBlFw&_nc_zt=24&_nc_ht=scontent.fpkr3-1.fna&_nc_gid=AId6pD1m_zFzu8XDV4ga2Qu&oh=00_AYAf4SfTVEqbTfEPNLp4ARltB7DsR4bbYtHatGBBVbh-5Q&oe=67AF7E0E" alt="Santosh Giri">
-        </div>
-
-        <div class="about-me">
-            <h2>About Me</h2>
-            <p>I am a passionate student pursuing CSIT at Midwest University. I have a strong interest in technology,
-               development, and exploring new innovations in the digital world. My goal is to contribute to impactful projects
-               and continuously grow as a developer.</p>
-        </div>
-
-        <div class="skills">
-            <h2>Skills</h2>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">SG</div>
             <ul>
-                <li>Flutter Development</li>
-                <li>Networking</li>
-                <li>Hacking</li>
-                <li>Game Development</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="cyber-container">
+            <h1 class="glitch" data-text="Santosh Giri">Santosh Giri</h1>
+            <p class="subtitle">Cybersecurity Enthusiast | BSc CSIT Student</p>
+            <div class="cyber-buttons">
+                <a href="#contact" class="cyber-button">Get In Touch</a>
+                <a href="#about" class="cyber-button">Learn More</a>
+            </div>
         </div>
+    </section>
 
-        <div class="achievements">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Winner of National Coding Championship 2023</li>
-                <li>Published research paper on "AI in Game Development"</li>
-                <li>Developed a cross-platform app with 10k+ downloads</li>
-                <li>Certified Ethical Hacker (CEH)</li>
-            </ul>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Professional Statement</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>As a dedicated BSc CSIT student at Mid West University with a passion for cybersecurity, I am committed to protecting digital assets and maintaining the confidentiality, integrity, and availability of information systems. Currently enhancing my expertise through the Google Cybersecurity Professional Certificate program, I combine theoretical knowledge with practical skills to address modern security challenges.</p>
+                    <div class="security-stats">
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security First</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span>Technical Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-lock"></i>
+                            <span>Privacy Focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>Developed a task management app for a local company to streamline their workflow.</li>
-                <li>Internship at XYZ Tech, focusing on mobile app development using Flutter.</li>
-                <li>Contributed to open-source projects on GitHub, enhancing community-driven apps.</li>
-                <li>Led a team of 4 in creating a game application for a university competition.</li>
-            </ul>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>Network Security</li>
+                        <li>Threat Analysis</li>
+                        <li>Security Protocols</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Networking</h3>
+                    <ul>
+                        <li>TCP/IP</li>
+                        <li>Network Protocols</li>
+                        <li>Firewall Configuration</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="contact">
-            <a href="mailto:santosh.giri@example.com">Email Me</a>
-            <a href="https://www.youtube.com/@alphonseyt9574" target="_blank">YouTube</a>
-            <a href="https://www.facebook.com/profile.php?id=100033664321562" target="_blank">Facebook</a>
-            <a href="/404.html" class="contact-btn">Contact Me</a>
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>BSc CSIT</h3>
+                        <p>Mid West University</p>
+                        <span class="date">Current</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Google Cybersecurity Professional Certificate</h3>
+                        <p>Coursera</p>
+                        <span class="date">In Progress</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>&copy; 2024 Santosh Giri. All rights reserved.</p>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="cyber-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const button = document.querySelector('.theme-switcher');
-            const snowfall = document.querySelector('.snowfall');
-            const stars = document.querySelector('.stars');
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Santosh Giri. All rights reserved.</p>
+        </div>
+    </footer>
 
-            if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                body.classList.add('dark-theme');
-                button.textContent = 'Switch to Light Mode';
-                snowfall.style.display = 'block';
-                stars.style.display = 'block';
-            } else {
-                body.classList.remove('dark-theme');
-                body.classList.add('light-theme');
-                button.textContent = 'Switch to Dark Mode';
-                snowfall.style.display = 'none';
-                stars.style.display = 'none';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
