@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #00ffff;
-    --secondary-color: #ff00ff;
+    --primary-color: #00ff00;
+    --secondary-color: #003300;
     --background-color: #0a0a20;
     --text-color: #ffffff;
-    --accent-color: #ff00ff;
+    --accent-color: #00cc00;
     --cyber-glow: 0 0 10px var(--primary-color);
 }
 
@@ -22,19 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Matrix Background Animation */
-.matrix-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.05;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
-}
-
 /* Cyberpunk Background */
 .cyberpunk-bg {
     position: fixed;
@@ -44,6 +31,12 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: -1;
+}
+
+.cybersecurity-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: 
         linear-gradient(45deg, 
             rgba(0, 0, 30, 0.8), 
@@ -75,6 +68,7 @@ nav {
     font-size: 2rem;
     color: var(--primary-color);
     text-shadow: var(--cyber-glow);
+    font-weight: bold;
 }
 
 nav ul {
@@ -90,7 +84,7 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     color: var(--primary-color);
     text-shadow: var(--cyber-glow);
 }
@@ -125,27 +119,6 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* Cyber Buttons */
-.cyber-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    margin: 0.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 2px solid var(--primary-color);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-}
-
-.cyber-button:hover {
-    background: var(--primary-color);
-    color: var(--background-color);
-    box-shadow: var(--cyber-glow);
-}
-
 /* Sections */
 section {
     padding: 5rem 1rem;
@@ -162,33 +135,6 @@ section {
     margin-bottom: 3rem;
     color: var(--primary-color);
     text-shadow: var(--cyber-glow);
-}
-
-/* About Section */
-.about-content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.security-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
 }
 
 /* Skills Section */
@@ -225,14 +171,12 @@ section {
 
 /* Education Timeline */
 .education-timeline {
-    position: relative;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .timeline-item {
     margin-bottom: 2rem;
-    position: relative;
     padding-left: 2rem;
     border-left: 2px solid var(--primary-color);
 }
@@ -257,34 +201,29 @@ section {
 }
 
 .certificate-card {
-    background: rgba(0, 30, 30, 0.3);
+    background: rgba(0, 51, 0, 0.3);
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .certificate-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    box-shadow: var(--cyber-glow);
 }
 
 .certificate-preview {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    border-bottom: 1px solid var(--primary-color);
 }
 
 .certificate-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.certificate-card:hover .certificate-preview img {
-    transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
 .certificate-info {
@@ -293,19 +232,15 @@ section {
 
 .certificate-info h3 {
     color: var(--primary-color);
-    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .certificate-date {
-    color: var(--secondary-color);
+    color: var(--accent-color);
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
 }
 
 .certificate-issuer {
-    color: var(--text-color);
-    font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
@@ -314,8 +249,25 @@ section {
     padding: 0.5rem 1rem;
 }
 
-.certificate-link i {
-    margin-right: 0.5rem;
+/* Cyber Button */
+.cyber-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.cyber-button:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: var(--cyber-glow);
 }
 
 /* Footer */
@@ -323,6 +275,24 @@ footer {
     text-align: center;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.8);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--text-color);
+    text-shadow: var(--cyber-glow);
 }
 
 /* Animations */
@@ -363,19 +333,15 @@ footer {
         display: none;
     }
     
-    .about-content {
-        flex-direction: column;
-    }
-    
     .glitch {
         font-size: 2.5rem;
     }
-
-    .certificates-grid {
-        grid-template-columns: 1fr;
+    
+    .skill-card {
+        margin-bottom: 1rem;
     }
     
-    .certificate-preview {
-        height: 180px;
+    .certificates-grid {
+        grid-template-columns: 1fr;
     }
 }
