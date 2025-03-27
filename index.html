@@ -6,17 +6,25 @@
     <title>Santosh Giri - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Santosh Giri - Cybersecurity enthusiast and BSc CSIT student">
+    <meta name="author" content="Santosh Giri">
 </head>
 <body>
-    <div class="cyberpunk-bg">
-        <div class="cybersecurity-elements"></div>
+    <div class="video-background">
+        <video id="bgVideo" muted playsinline>
+            <source src="cyber security stock footage - free video cyber security background.mp4#t=0,15" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
     </div>
-
+    
     <header>
         <nav>
-            <div class="logo">SG</div>
+            <div class="logo">
+                <img src="images/profile.jpg" alt="Santosh Giri" class="profile-pic">
+                <span>SG</span>
+            </div>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
@@ -42,9 +50,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>As a dedicated BSc CSIT student at Mid West University with a passion for cybersecurity, 
-                       I am committed to protecting digital assets and maintaining the confidentiality, integrity, 
-                       and availability of information systems. Currently enhancing my skills through the Google 
-                       Cybersecurity Professional Certificate program.</p>
+                       I am currently enhancing my skills through the Google Cybersecurity Professional Certificate program. 
+                       My focus lies in understanding and implementing robust security measures to protect digital assets 
+                       and maintain the confidentiality, integrity, and availability of information systems.</p>
                     <div class="security-stats">
                         <div class="stat">
                             <i class="fas fa-shield-alt"></i>
@@ -75,6 +83,7 @@
                         <li>Network Security</li>
                         <li>Threat Analysis</li>
                         <li>Security Protocols</li>
+                        <li>Risk Assessment</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -84,6 +93,7 @@
                         <li>Python</li>
                         <li>HTML/CSS</li>
                         <li>JavaScript</li>
+                        <li>SQL</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -93,6 +103,7 @@
                         <li>TCP/IP</li>
                         <li>Network Protocols</li>
                         <li>Firewall Configuration</li>
+                        <li>VPN Setup</li>
                     </ul>
                 </div>
             </div>
@@ -123,18 +134,20 @@
 
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/AlphonseYT" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://np.linkedin.com/in/santosh-giri-084a09358" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="footer-content">
+                <p>&copy; 2025 Santosh Giri. Last updated: 2025-03-27</p>
+                <div class="social-links">
+                    <a href="https://github.com/AlphonseYT" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
-            <p>&copy; 2025 Santosh Giri. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="background.js"></script>
+    <script src="videoControl.js"></script>
 </body>
 </html>
